@@ -1,0 +1,110 @@
+
+/* Contact Page ---------------------------------- */ 
+.contact-feature {
+    padding: 30px;
+    border-radius: 0px;
+    border: 1px solid $border-color2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &:not(:last-child) {
+        margin-bottom: 35px;
+    }
+    @media (max-width: 1300px) and (min-width: 1200px) {
+        padding: 14px 10px 14px 14px;
+    }
+    .box-icon {
+        @include equal-size-lineHeight(40px);
+        font-size: 18px;
+        color: $white-color;
+        background-color: $theme-color;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .box-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        @include lg {
+            font-size: 22px;
+        }
+    }
+    .box-text {
+        line-height: 24px;
+        a {
+            max-width: fit-content;
+            color: inherit;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .th-social {
+        a {
+            --icon-size: 40px;
+            border-radius: 10px;
+            &:not(:hover) {
+                color: $title-color;
+            }
+            @include xl {
+                &:not(:last-child) {
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+.contact-form-v1 {
+    padding: 60px;
+    margin-right: 36px;
+    @include md {
+        margin-right: 0;
+        margin-top: 50px;
+    }
+    @include sm {
+        padding: 40px;
+    }
+    @include xs {
+        padding: 30px;
+    }
+}
+.rounded-20 {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.form-text {
+    font-size: 16px;
+}
+.contact-map {
+    line-height: 0px;
+    max-width: 1520px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    iframe {
+        width: 100%;
+        height: 670px;
+        border-radius: 30px;
+        @include lg {
+            height: 400px;
+        }
+        @include md {
+            height: 350px;
+            border-radius: 20px;
+        }
+    }
+    &.style2 {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: -110px;
+        iframe {
+            border-radius: 0;
+        }
+        @include sm {
+            margin-bottom: -220px;
+            iframe {
+                height: 600px;
+            }
+        }
+    }
+}
